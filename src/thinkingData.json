@@ -1,0 +1,519 @@
+[
+  {
+    "time": 4.099999999999991,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.116666666666657,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.119,
+      "eyeBlinkRight": 0.119,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.05,
+      "mouthFrownRight": 0.05
+    }
+  },
+  {
+    "time": 4.133333333333324,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.283,
+      "eyeBlinkRight": 0.283,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.1,
+      "mouthFrownRight": 0.1
+    }
+  },
+  {
+    "time": 4.149999999999991,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.423,
+      "eyeBlinkRight": 0.423,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.15, 
+      "mouthFrownRight": 0.15
+    }
+  },
+  {
+    "time": 4.166666666666657,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.502,
+      "eyeBlinkRight": 0.502,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.2,
+      "mouthFrownRight": 0.2
+    }
+  },
+  {
+    "time": 4.183333333333324,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.464,
+      "eyeBlinkRight": 0.464,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.18,
+      "mouthFrownRight": 0.18
+    }
+  },
+  {
+    "time": 4.19999999999999,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.35,
+      "eyeBlinkRight": 0.35,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.14, 
+      "mouthFrownRight": 0.14
+    }
+  },
+  {
+    "time": 4.216666666666657,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.229,
+      "eyeBlinkRight": 0.229,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.1, 
+      "mouthFrownRight": 0.1 
+    }
+  },
+  {
+    "time": 4.233333333333324,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.142,
+      "eyeBlinkRight": 0.143,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.06, 
+      "mouthFrownRight": 0.06 
+    }
+  },
+  {
+    "time": 4.24999999999999,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.103,
+      "eyeBlinkRight": 0.103,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.04, 
+      "mouthFrownRight": 0.04 
+    }
+  },
+  {
+    "time": 4.266666666666657,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.072,
+      "eyeBlinkRight": 0.072,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.02, 
+      "mouthFrownRight": 0.02
+    }
+  },
+  {
+    "time": 4.2833333333333234,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.04,
+      "eyeBlinkRight": 0.04,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.01, 
+      "mouthFrownRight": 0.01
+    }
+  },
+  {
+    "time": 4.29999999999999,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.022,
+      "eyeBlinkRight": 0.022,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.005, 
+      "mouthFrownRight": 0.005 
+    }
+  },
+  {
+    "time": 4.316666666666657,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.012,
+      "eyeBlinkRight": 0.012,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0.002, 
+      "mouthFrownRight": 0.002
+    }
+  },
+  {
+    "time": 4.333333333333323,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.007,
+      "eyeBlinkRight": 0.007,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.34999999999999,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.005,
+      "eyeBlinkRight": 0.005,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.3666666666666565,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.003,
+      "eyeBlinkRight": 0.003,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.383333333333323,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.002,
+      "eyeBlinkRight": 0.002,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.39999999999999,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.002,
+      "eyeBlinkRight": 0.002,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.416666666666656,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.433333333333323,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.4499999999999895,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.466666666666656,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.483333333333323,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.499999999999989,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.516666666666656,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.533333333333323,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.549999999999989,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.566666666666656,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.583333333333322,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.599999999999989,
+    "blendshapes": {
+      "eyeBlinkLeft": 0.001,
+      "eyeBlinkRight": 0.001,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.616666666666656,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.633333333333322,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.649999999999989,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.666666666666655,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.683333333333322,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.699999999999989,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.716666666666655,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.733333333333322,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.7499999999999885,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.766666666666655,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.783333333333322,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.799999999999988,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.816666666666655,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.8333333333333215,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.849999999999988,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  },
+  {
+    "time": 4.866666666666655,
+    "blendshapes": {
+      "eyeBlinkLeft": 0,
+      "eyeBlinkRight": 0,
+      "mouthSmileLeft": 0.3,
+      "mouthSmileRight": 0.3,
+      "mouthFrownLeft": 0,
+      "mouthFrownRight": 0
+    }
+  }
+]

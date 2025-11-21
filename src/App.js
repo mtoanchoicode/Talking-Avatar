@@ -16,6 +16,7 @@ import ReactAudioPlayer from "react-audio-player";
 
 import createAnimation from "./converter";
 import blinkData from "./blendDataBlink.json";
+import thinkingData from "./thinkingData.json";
 
 import * as THREE from "three";
 import axios from "axios";
@@ -26,525 +27,6 @@ const _ = require("lodash");
 const host = "http://127.0.0.1:5000";
 
 // Thinking animation data - subtle head nod and thinking expression
-const thinkingData = [
-  {
-    time: 4.099999999999991,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0, // Start at 0
-      mouthFrownRight: 0, // Start at 0
-    },
-  },
-  {
-    time: 4.116666666666657,
-    blendshapes: {
-      eyeBlinkLeft: 0.119,
-      eyeBlinkRight: 0.119,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.05, // Slightly increase
-      mouthFrownRight: 0.05, // Slightly increase
-    },
-  },
-  {
-    time: 4.133333333333324,
-    blendshapes: {
-      eyeBlinkLeft: 0.283,
-      eyeBlinkRight: 0.283,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.1, // Increase
-      mouthFrownRight: 0.1, // Increase
-    },
-  },
-  {
-    time: 4.149999999999991,
-    blendshapes: {
-      eyeBlinkLeft: 0.423,
-      eyeBlinkRight: 0.423,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.15, // Increase
-      mouthFrownRight: 0.15, // Increase
-    },
-  },
-  {
-    time: 4.166666666666657,
-    blendshapes: {
-      eyeBlinkLeft: 0.502,
-      eyeBlinkRight: 0.502,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.2, // Max value
-      mouthFrownRight: 0.2, // Max value
-    },
-  },
-  {
-    time: 4.183333333333324,
-    blendshapes: {
-      eyeBlinkLeft: 0.464,
-      eyeBlinkRight: 0.464,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.18, // Decrease
-      mouthFrownRight: 0.18, // Decrease
-    },
-  },
-  {
-    time: 4.19999999999999,
-    blendshapes: {
-      eyeBlinkLeft: 0.35,
-      eyeBlinkRight: 0.35,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.14, // Decrease
-      mouthFrownRight: 0.14, // Decrease
-    },
-  },
-  {
-    time: 4.216666666666657,
-    blendshapes: {
-      eyeBlinkLeft: 0.229,
-      eyeBlinkRight: 0.229,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.1, // Decrease
-      mouthFrownRight: 0.1, // Decrease
-    },
-  },
-  {
-    time: 4.233333333333324,
-    blendshapes: {
-      eyeBlinkLeft: 0.142,
-      eyeBlinkRight: 0.143,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.06, // Decrease
-      mouthFrownRight: 0.06, // Decrease
-    },
-  },
-  {
-    time: 4.24999999999999,
-    blendshapes: {
-      eyeBlinkLeft: 0.103,
-      eyeBlinkRight: 0.103,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.04, // Decrease
-      mouthFrownRight: 0.04, // Decrease
-    },
-  },
-  {
-    time: 4.266666666666657,
-    blendshapes: {
-      eyeBlinkLeft: 0.072,
-      eyeBlinkRight: 0.072,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.02, // Decrease
-      mouthFrownRight: 0.02, // Decrease
-    },
-  },
-  {
-    time: 4.2833333333333234,
-    blendshapes: {
-      eyeBlinkLeft: 0.04,
-      eyeBlinkRight: 0.04,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.01, // Decrease
-      mouthFrownRight: 0.01, // Decrease
-    },
-  },
-  {
-    time: 4.29999999999999,
-    blendshapes: {
-      eyeBlinkLeft: 0.022,
-      eyeBlinkRight: 0.022,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.005, // Decrease
-      mouthFrownRight: 0.005, // Decrease
-    },
-  },
-  {
-    time: 4.316666666666657,
-    blendshapes: {
-      eyeBlinkLeft: 0.012,
-      eyeBlinkRight: 0.012,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0.002, // Decrease
-      mouthFrownRight: 0.002, // Decrease
-    },
-  },
-  {
-    time: 4.333333333333323,
-    blendshapes: {
-      eyeBlinkLeft: 0.007,
-      eyeBlinkRight: 0.007,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0, // Back to 0
-      mouthFrownRight: 0, // Back to 0
-    },
-  },
-  {
-    time: 4.34999999999999,
-    blendshapes: {
-      eyeBlinkLeft: 0.005,
-      eyeBlinkRight: 0.005,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.3666666666666565,
-    blendshapes: {
-      eyeBlinkLeft: 0.003,
-      eyeBlinkRight: 0.003,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.383333333333323,
-    blendshapes: {
-      eyeBlinkLeft: 0.002,
-      eyeBlinkRight: 0.002,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.39999999999999,
-    blendshapes: {
-      eyeBlinkLeft: 0.002,
-      eyeBlinkRight: 0.002,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.416666666666656,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.433333333333323,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.4499999999999895,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.466666666666656,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.483333333333323,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.499999999999989,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.516666666666656,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.533333333333323,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.549999999999989,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.566666666666656,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.583333333333322,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.599999999999989,
-    blendshapes: {
-      eyeBlinkLeft: 0.001,
-      eyeBlinkRight: 0.001,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.616666666666656,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.633333333333322,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.649999999999989,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.666666666666655,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.683333333333322,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.699999999999989,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.716666666666655,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.733333333333322,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.7499999999999885,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.766666666666655,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.783333333333322,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.799999999999988,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.816666666666655,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.8333333333333215,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.849999999999988,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-  {
-    time: 4.866666666666655,
-    blendshapes: {
-      eyeBlinkLeft: 0,
-      eyeBlinkRight: 0,
-      mouthSmileLeft: 0.3,
-      mouthSmileRight: 0.3,
-      mouthFrownLeft: 0,
-      mouthFrownRight: 0,
-    },
-  },
-];
 
 function Avatar({
   avatar_url,
@@ -554,6 +36,7 @@ function Avatar({
   setAudioSource,
   playing,
   isThinking,
+  blendData,
 }) {
   let gltf = useGLTF(avatar_url);
   let morphTargetDictionaryBody = null;
@@ -707,32 +190,22 @@ function Avatar({
   const mixer = useMemo(() => new THREE.AnimationMixer(gltf.scene), []);
   const thinkingActionRef = useRef(null);
 
+  // New effect: react to incoming blendData
   useEffect(() => {
-    if (speak === false) return;
+    if (!blendData || !morphTargetDictionaryBody) return;
 
-    makeSpeech(text)
-      .then((response) => {
-        let { blendData, filename } = response.data;
+    const newClips = [
+      createAnimation(blendData, morphTargetDictionaryBody, "HG_Body"),
+      createAnimation(
+        blendData,
+        morphTargetDictionaryLowerTeeth,
+        "HG_TeethLower"
+      ),
+    ];
 
-        let newClips = [
-          createAnimation(blendData, morphTargetDictionaryBody, "HG_Body"),
-          createAnimation(
-            blendData,
-            morphTargetDictionaryLowerTeeth,
-            "HG_TeethLower"
-          ),
-        ];
-
-        filename = host + filename;
-
-        setClips(newClips);
-        setAudioSource(filename);
-      })
-      .catch((err) => {
-        console.error(err);
-        setSpeak(false);
-      });
-  }, [speak]);
+    setClips(newClips);
+    // setBlendData(null); // optional: clear after use to prevent replay
+  }, [blendData, morphTargetDictionaryBody, morphTargetDictionaryLowerTeeth]);
 
   let idleFbx = useFBX("/idle.fbx");
   let { clips: idleClips } = useAnimations(idleFbx.animations);
@@ -875,14 +348,22 @@ function App() {
   const recognitionRef = useRef(null);
 
   const [speak, setSpeak] = useState(false);
-  const [text, setText] = useState(
-    "My name is Arwen. I'm a virtual human who can speak whatever you type here along with realistic facial movements."
-  );
+  const [text, setText] = useState("Hello how are you today");
   const [audioSource, setAudioSource] = useState(null);
   const [playing, setPlaying] = useState(false);
   const [isListening, setIsListening] = useState(false);
   const [voiceStatus, setVoiceStatus] = useState("");
   const [isThinking, setIsThinking] = useState(false);
+  const [blendData, setBlendData] = useState(null);
+
+  // Session management
+  const [sessionId, setSessionId] = useState(() => {
+    // Generate initial session on load
+    return `session_${Date.now()}_${Math.random().toString(36).substr(2, 9)}`;
+  });
+
+  // Mode management (RAG vs LLM-only)
+  const [useRAG, setUseRAG] = useState(true);
 
   // Initialize speech recognition
   useEffect(() => {
@@ -941,6 +422,44 @@ function App() {
     }
   }, [speak, playing]);
 
+  // Modified makeSpeech to include session and mode
+  const makeSpeechWithSession = (text) => {
+    return fetch(host + "/talk", {
+      method: "POST",
+      headers: {
+        "Content-Type": "application/json",
+      },
+      body: JSON.stringify({
+        text,
+        session_id: sessionId,
+        use_rag: useRAG,
+      }),
+    }).then((res) => res.json());
+  };
+
+  // Override speak effect to use session
+  useEffect(() => {
+    if (speak === false) return;
+
+    setIsThinking(true); // optional: show thinking while waiting
+
+    makeSpeechWithSession(text)
+      .then((response) => {
+        let { blendData, filename } = response; // make sure your backend still returns blendData!
+
+        filename = host + filename;
+
+        setBlendData(blendData); // Save blendData
+        setAudioSource(filename); // Set audio
+        setSpeak(false); // important: reset speak trigger
+      })
+      .catch((err) => {
+        console.error(err);
+        setSpeak(false);
+        setIsThinking(false);
+      });
+  }, [speak, sessionId, useRAG]);
+
   // Toggle voice input
   const toggleVoiceInput = () => {
     if (!recognitionRef.current) {
@@ -957,6 +476,48 @@ function App() {
       recognitionRef.current.start();
     }
   };
+  // Create new session
+  const createNewSession = () => {
+    const newSessionId = `session_${Date.now()}_${Math.random()
+      .toString(36)
+      .substr(2, 9)}`;
+    setSessionId(newSessionId);
+    setVoiceStatus("New session started!");
+    setTimeout(() => setVoiceStatus(""), 2000);
+  };
+
+  // Clear current session memory
+  const clearCurrentSession = async () => {
+    try {
+      const response = await fetch(host + "/clear_session", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ session_id: sessionId }),
+      });
+
+      if (response.ok) {
+        setVoiceStatus("Session memory cleared!");
+      } else {
+        setVoiceStatus("Error clearing session");
+      }
+      setTimeout(() => setVoiceStatus(""), 2000);
+    } catch (error) {
+      console.error("Error clearing session:", error);
+      setVoiceStatus("Error clearing session");
+      setTimeout(() => setVoiceStatus(""), 2000);
+    }
+  };
+
+  // Toggle mode
+  const toggleMode = () => {
+    setUseRAG(!useRAG);
+    setVoiceStatus(
+      useRAG ? "Switched to LLM-only mode" : "Switched to RAG mode"
+    );
+    setTimeout(() => setVoiceStatus(""), 2000);
+  };
 
   // End of play
   function playerEnded(e) {
@@ -964,6 +525,7 @@ function App() {
     setSpeak(false);
     setPlaying(false);
     setIsThinking(false);
+    setBlendData(null);
     setVoiceStatus("");
   }
 
@@ -994,7 +556,7 @@ function App() {
           style={STYLES.speak}
           disabled={speak}
         >
-          {speak ? "Running..." : "Speak"}
+          {speak ? "Running..." : "Ask"}
         </button>
         <button
           onClick={toggleVoiceInput}
@@ -1007,6 +569,32 @@ function App() {
           {isListening ? "🎤 Stop Listening" : "🎤 Voice Input"}
         </button>
         {voiceStatus && <div style={STYLES.status}>{voiceStatus}</div>}
+      </div>
+
+      {/* Control Panel - Top Right */}
+      <div style={STYLES.area2}>
+        <div style={STYLES.label}>Mode:</div>
+        <button
+          onClick={toggleMode}
+          style={{
+            ...STYLES.modeButton,
+            background: useRAG ? "#2563eb" : "#dc2626",
+          }}
+        >
+          {useRAG ? "🧠 RAG Mode" : "💭 LLM-only Mode"}
+        </button>
+
+        <div style={{ ...STYLES.label, marginTop: "15px" }}>Session:</div>
+        <button onClick={createNewSession} style={STYLES.sessionButton}>
+          🔄 New Session
+        </button>
+        <button onClick={clearCurrentSession} style={STYLES.sessionButton}>
+          🗑️ Clear Memory
+        </button>
+
+        <div style={{ ...STYLES.label, marginTop: "10px", fontSize: "0.7em" }}>
+          ID: {sessionId.substring(0, 15)}...
+        </div>
       </div>
 
       <ReactAudioPlayer
@@ -1044,6 +632,7 @@ function App() {
             setAudioSource={setAudioSource}
             playing={playing}
             isThinking={isThinking}
+            blendData={blendData}
           />
         </Suspense>
       </Canvas>
