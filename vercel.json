@@ -2,7 +2,7 @@
   "rewrites": [
     {
       "source": "/api/backend/:path*",
-      "destination": "talking-avatar-backend-ALB-34545551.ap-southeast-2.elb.amazonaws.com/:path*"
+      "destination": "http://talking-avatar-backend-ALB-34545551.ap-southeast-2.elb.amazonaws.com/:path*"
     }
   ]
 }
