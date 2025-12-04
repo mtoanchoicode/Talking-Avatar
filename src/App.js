@@ -24,7 +24,7 @@ import { SRGBColorSpace, LinearSRGBColorSpace } from "three";
 
 const _ = require("lodash");
 
-const host = "/api/backend";
+const host = "http://127.0.0.1:5000";
 
 // Thinking animation data - subtle head nod and thinking expression
 
