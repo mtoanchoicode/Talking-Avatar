@@ -6,41 +6,42 @@ This repository contains the code for a **real-time, 3D avatar communication sys
 
 ## 📁 Project Structure
 
-The project uses a standard structure separating frontend assets (React application) and core backend logic (Python server).
+The project uses a structured layout separating the React frontend and the Python backend.
 
-| Directory/File           | Description                                                                                                  |
-| :----------------------- | :----------------------------------------------------------------------------------------------------------- |
-| `talking_avatar/`        | Root directory for the project.                                                                              |
-| ├── `audio_output/`      | Output directory for generated audio files.                                                                  |
-| ├── `node_modules/`      | Automatically generated directory containing Node.js dependencies. **(Ignored by Git)**                      |
-| ├── `public/`            | Static assets directory for the React frontend (e.g., `index.html`).                                         |
-| ├── `RAG_index/`         | Directory likely used for storing data or indices for Retrieval-Augmented Generation (RAG) functionality.    |
-| ├── `src/`               | Source code for the React frontend.                                                                          |
-| │   ├── `App.js`         | Main React component for the user interface.                                                                 |
-| │   ├── `blendData.json` | Configuration for avatar blend shapes/animations.                                                            |
-| │   ├── `index.js`       | Entry point for the React application.                                                                       |
-| │   └── `...`            | Other frontend assets and components.                                                                        |
-| ├── `.env`               | **Crucial configuration file.** Stores API keys and environment variables. **(Must be obtained separately)** |
-| ├── `.gitignore`         | Specifies files and directories to ignore in version control (like `node_modules`).                          |
-| ├── `package.json`       | Defines Node.js dependencies and scripts for the frontend.                                                   |
-| ├── `requirements.txt`   | Defines Python dependencies for the backend.                                                                 |
-| ├── `server.py`          | Main Python backend application script.                                                                      |
+| Directory/File             | Description                                                                            |
+| :------------------------- | :------------------------------------------------------------------------------------- |
+| `talking_avatar/`          | Root directory for the project.                                                        |
+| ├── `audio_output/`        | Output directory for generated audio files.                                            |
+| ├── `node_modules/`        | Automatically generated Node.js dependencies. **(Ignored by Git)**                     |
+| ├── `public/`              | Static assets directory for the React frontend.                                        |
+| ├── `RAG_index/`           | Likely used for storing RAG-related data or indices.                                   |
+| ├── `src/`                 | Source code for the React frontend.                                                    |
+| │ ├── `App.js`             | Main React interface component.                                                        |
+| │ ├── `blendData.json`     | Avatar blendshape/animation configuration.                                             |
+| │ ├── `index.js`           | Entry point of the React application.                                                  |
+| │ └── `...`                | Other frontend components and assets.                                                  |
+| ├── `backend/`             | **Backend directory containing the Python server files.**                              |
+| │ ├── `delete_pinecone.py` | Script related to delete all record in Pinecone.                                       |
+| │ ├── `requirements.txt`   | Python dependencies for the backend.                                                   |
+| │ └── `server.py`          | Main backend server application.                                                       |
+| ├── `.env`                 | Critical environment variables (API keys, config). **Not included—obtain separately.** |
+| ├── `.gitignore`           | Git ignore rules (e.g., `node_modules/`).                                              |
+| ├── `package.json`         | Node.js dependencies and scripts for the frontend.                                     |
 
 ---
 
 ## 🚀 Setup and Run Instructions
 
-This project requires both **Node.js/npm** for the frontend and **Python/pip** for the backend.
+This project requires **Node.js/npm** for the frontend and **Python/pip** for the backend.
 
-### 1. Configuration (Crucial Step)
+---
 
-The application requires environment variables (e.g., API keys) to function.
+## 1. Configuration (Important)
 
-> **Download the `.env` file:**
->
-> - This file is **not included** in the repository for security reasons.
-> - Contact the project owner/administrator to obtain the necessary `.env` file.
-> - Place the obtained `.env` file directly in the root directory (`talking_avatar/`).
+The project requires a `.env` file with environment variables.
+
+> **Get the `.env` file from the project owner.**  
+> Place it in the root directory:
 
 ### 2. Install Dependencies
 
@@ -52,4 +53,30 @@ Run this command in the root directory (`talking_avatar/`):
 
 ```bash
 npm install
+```
+
+#### B. Backend Dependencies (Node.js)
+
+Run this command in the backend directory (`talking_avatar/`):
+
+```bash
+pip install -r requirements.txt
+```
+
+### 3. Run Application
+
+#### A. Frontend (Node.js)
+
+Run this command in the root directory (`talking_avatar/`):
+
+```bash
+npm start
+```
+
+#### B. Backend (Node.js)
+
+Run this command in the backend directory (`talking_avatar/`):
+
+```bash
+python server.py
 ```
